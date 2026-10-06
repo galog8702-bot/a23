@@ -1,0 +1,75 @@
+const formulario = document.getElementById("formularioDonante");
+const listaDonantes = document.getElementById("listaDonantes");
+const mensaje = document.getElementById("mensaje");
+
+formulario.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    // Obtener los datos
+    const nombre = document.getElementById("nombre").value;
+    const sangre = document.getElementById("sangre").value;
+    const telefono = document.getElementById("telefono").value;
+
+    const donar = document.querySelector(
+        'input[name="donar"]:checked'
+    ).value;
+
+    // Crear una nueva fila
+    const fila = document.createElement("tr");
+
+    fila.innerHTML = `
+        <td>${nombre}</td>
+        <td>${sangre}</td>
+        <td>${telefono}</td>
+        <td>${donar}</td>
+    `;
+
+    // Agregar la fila a la tabla
+    listaDonantes.appendChild(fila);
+
+    // Mostrar mensaje
+    mensaje.textContent = "¡Donante registrado correctamente!";
+    mensaje.style.display = "block";
+
+    // Limpiar formulario
+    formulario.reset();
+
+});const formulario = document.getElementById("formularioDonante");
+const listaDonantes = document.getElementById("listaDonantes");
+const mensaje = document.getElementById("mensaje");
+
+formulario.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    // Obtener los datos
+    const nombre = document.getElementById("nombre").value;
+    const sangre = document.getElementById("sangre").value;
+    const telefono = document.getElementById("telefono").value;
+
+    const donar = document.querySelector(
+        'input[name="donar"]:checked'
+    ).value;
+
+    // Crear una nueva fila
+    const fila = document.createElement("tr");
+
+    fila.innerHTML = `
+        <td>${nombre}</td>
+        <td>${sangre}</td>
+        <td>${telefono}</td>
+        <td>${donar}</td>
+    `;
+
+    // Agregar la fila a la tabla
+    listaDonantes.appendChild(fila);
+
+    // Mostrar mensaje
+    mensaje.textContent = "¡Donante registrado correctamente!";
+    mensaje.style.display = "block";
+
+    // Limpiar formulario
+    formulario.reset();
+
+});
